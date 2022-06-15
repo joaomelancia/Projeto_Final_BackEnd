@@ -1,1 +1,51 @@
-GET http://localhost:3000/journalistModel.js
+GET http://localhost:3000/journalistRoute
+
+###
+
+POST http://localhost:3000/journalistRoute
+Content-Type: application/json
+
+{
+    "name": "João Coiso",
+    "job_function": "Faz cenas",
+    "date_of_admission": 11112011,
+    "birthday" : 11111911,
+    "email" : "joaocoiso@gmail.com"
+}
+
+###
+
+PATCH http://localhost:3000/journalistRoute/62aa13a6ff19a4f4c3948839
+Content-Type: application/json
+
+{
+    "name": "Jonas Pistolas"    
+}
+
+
+###
+
+DELETE http://localhost:3000/journalistRoute/62aa13a6ff19a4f4c3948839
+
+###
+
+
+
+
+
+
+
+GET http://localhost:3000/locationRoute
+
+###
+
+POST http://localhost:3000/locationRoute
+Content-Type: application/json
+
+{
+    "adress": "Rua do Tal Sitio, nº 200, Camarate",
+    "floor": 4,
+    "phonenumber" : 21913465 
+}
+
+###
