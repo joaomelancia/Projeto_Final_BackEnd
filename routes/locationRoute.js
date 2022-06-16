@@ -1,11 +1,12 @@
 const express = require("express");
+const router = express.Router();
+
 const { allLocations,
     createLocation,
     getLocation,
     updateLocation,
     deleteLocation
      } = require("./../controllers/locationController.js");
-const router = express.Router();
 
 router
     .route("/")

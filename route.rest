@@ -15,22 +15,22 @@ Content-Type: application/json
 
 ###
 
-PATCH http://localhost:3000/journalistRoute/62aa13a6ff19a4f4c3948839
+PATCH http://localhost:3000/journalistRoute/:journalistID
 Content-Type: application/json
 
 {
     "name": "Jonas Pistolas"    
 }
 
+# Trocar :journalistID pelo ID do jornalista que quisermos fazer o patch
 
 ###
 
-DELETE http://localhost:3000/journalistRoute/62aa13a6ff19a4f4c3948839
+DELETE http://localhost:3000/journalistRoute/:journalistID
+
+# Trocar :journalistID pelo ID do jornalista que quisermos fazer o delete
 
 ###
-
-
-
 
 
 
@@ -43,9 +43,62 @@ POST http://localhost:3000/locationRoute
 Content-Type: application/json
 
 {
-    "adress": "Rua do Tal Sitio, nº 200, Camarate",
+    "adress": "Rua do Tal Sitio, nº 201, Camarate",
     "floor": 4,
     "phonenumber" : 21913465 
 }
+
+###
+
+PATCH http://localhost:3000/locationRoute/:locationID
+Content-Type: application/json
+
+{
+    "adress": "Outro Sitio"    
+}
+
+# Trocar :locationID pelo ID do jornalista que quisermos fazer o patch
+
+###
+
+DELETE http://localhost:3000/locationRoute/:locationID
+
+# Trocar :locationID pelo ID do jornalista que quisermos fazer o delete
+
+###
+
+
+
+GET http://localhost:3000/sectionRoute
+
+###
+
+POST http://localhost:3000/sectionRoute
+Content-Type: application/json
+
+{
+    "name":"Secção",
+    "reports_on": "Descritivo",
+    "number_of_workers": 4,
+    "alloted_parking_space" : 0,
+    "section_email" : "tribuna@example.com"  
+}
+
+###
+
+PATCH http://localhost:3000/sectionRoute/:sectionID
+Content-Type: application/json
+
+{
+    "name": "Outro Nome"    
+}
+
+# Trocar :locationID pelo ID do jornalista que quisermos fazer o patch
+
+###
+
+DELETE http://localhost:3000/sectionRoute/:sectionID
+
+# Trocar :locationID pelo ID do jornalista que quisermos fazer o delete
 
 ###

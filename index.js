@@ -4,8 +4,10 @@ require('dotenv').config()
 const express = require("express"); 
 const app = express(); 
 const mongoose = require('mongoose')
+
 const journalistRouter = require('./routes/journalistRoute')
 const locationRouter = require('./routes/locationRoute')
+const sectionRouter = require('./routes/sectionRoute')
 
 app.use(express.json());
 
@@ -16,6 +18,7 @@ db.once('open',  () => console.log('Connection to database acomplished. Welcome 
 
 app.use('/journalistRoute', journalistRouter)
 app.use('/locationRoute', locationRouter)
+app.use('/sectionRoute', sectionRouter)
 
 //====== Local server ======
 app.listen(3000, ()=>{
